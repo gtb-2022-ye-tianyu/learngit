@@ -1,0 +1,423 @@
+
+ye@Ҷ▒▒▒▒ MINGW64 ~ (master)
+$ mkdir /d/yetianyu-learning-git
+mkdir: cannot create directory ‘/d/yetianyu-learning-git’: File exists
+
+ye@Ҷ▒▒▒▒ MINGW64 ~ (master)
+$ cd /d/yetianyu-learning-git
+
+ye@Ҷ▒▒▒▒ MINGW64 /d/yetianyu-learning-git
+$ touch exercise-1.txt
+
+ye@Ҷ▒▒▒▒ MINGW64 /d/yetianyu-learning-git
+$ git init
+Initialized empty Git repository in D:/yetianyu-learning-git/.git/
+
+ye@Ҷ▒▒▒▒ MINGW64 /d/yetianyu-learning-git (master)
+$ ls -al
+total 17
+drwxr-xr-x 1 ye 197121 0 Jun 14 16:18 ./
+drwxr-xr-x 1 ye 197121 0 Jun 14 16:15 ../
+drwxr-xr-x 1 ye 197121 0 Jun 14 16:18 .git/
+-rw-r--r-- 1 ye 197121 9 Jun 14 16:18 exercise-1.txt
+
+ye@Ҷ▒▒▒▒ MINGW64 /d/yetianyu-learning-git (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        exercise-1.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+ye@Ҷ▒▒▒▒ MINGW64 /d/yetianyu-learning-git (master)
+$ git add 'updata1.txt'
+fatal: pathspec 'updata1.txt' did not match any files
+
+ye@Ҷ▒▒▒▒ MINGW64 /d/yetianyu-learning-git (master)
+$ git add update1.txt
+fatal: pathspec 'update1.txt' did not match any files
+
+ye@Ҷ▒▒▒▒ MINGW64 /d/yetianyu-learning-git (master)
+$ git add exercise-1.txt
+
+ye@Ҷ▒▒▒▒ MINGW64 /d/yetianyu-learning-git (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   exercise-1.txt
+
+
+ye@Ҷ▒▒▒▒ MINGW64 /d/yetianyu-learning-git (master)
+$ git commit -m'update1.txt'
+[master (root-commit) b7fe008] update1.txt
+ 1 file changed, 1 insertion(+)
+ create mode 100644 exercise-1.txt
+
+ye@Ҷ▒▒▒▒ MINGW64 /d/yetianyu-learning-git (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+ye@Ҷ▒▒▒▒ MINGW64 /d/yetianyu-learning-git (master)
+$ git log
+commit b7fe0082c0ff4bd533cc3d06ddcae0fa605521a4 (HEAD -> master)
+Author: bambi233 <13836005934@163.com>
+Date:   Tue Jun 14 16:20:34 2022 +0800
+
+    update1.txt
+
+ye@Ҷ▒▒▒▒ MINGW64 /d/yetianyu-learning-git (master)
+$ touch exercise-2.txt exercisr-3.txt
+
+ye@Ҷ▒▒▒▒ MINGW64 /d/yetianyu-learning-git (master)
+$ ls -al
+total 17
+drwxr-xr-x 1 ye 197121 0 Jun 14 16:21 ./
+drwxr-xr-x 1 ye 197121 0 Jun 14 16:15 ../
+drwxr-xr-x 1 ye 197121 0 Jun 14 16:20 .git/
+-rw-r--r-- 1 ye 197121 9 Jun 14 16:18 exercise-1.txt
+-rw-r--r-- 1 ye 197121 0 Jun 14 16:21 exercise-2.txt
+-rw-r--r-- 1 ye 197121 0 Jun 14 16:21 exercisr-3.txt
+
+ye@Ҷ▒▒▒▒ MINGW64 /d/yetianyu-learning-git (master)
+$ git add -p
+No changes.
+
+ye@Ҷ▒▒▒▒ MINGW64 /d/yetianyu-learning-git (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        exercise-2.txt
+        exercisr-3.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+ye@Ҷ▒▒▒▒ MINGW64 /d/yetianyu-learning-git (master)
+$ git add ererxise-2.txt
+fatal: pathspec 'ererxise-2.txt' did not match any files
+
+ye@Ҷ▒▒▒▒ MINGW64 /d/yetianyu-learning-git (master)
+$ git add exercise-2.txt
+
+ye@Ҷ▒▒▒▒ MINGW64 /d/yetianyu-learning-git (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   exercise-2.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        exercisr-3.txt
+
+
+ye@Ҷ▒▒▒▒ MINGW64 /d/yetianyu-learning-git (master)
+$ git add erercisr-3.txt
+fatal: pathspec 'erercisr-3.txt' did not match any files
+
+ye@Ҷ▒▒▒▒ MINGW64 /d/yetianyu-learning-git (master)
+$ git add exercisr-3.txt
+
+ye@Ҷ▒▒▒▒ MINGW64 /d/yetianyu-learning-git (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   exercise-2.txt
+        new file:   exercisr-3.txt
+
+
+ye@Ҷ▒▒▒▒ MINGW64 /d/yetianyu-learning-git (master)
+$ git commit -m'update2.txt'
+[master 6125137] update2.txt
+ 2 files changed, 2 insertions(+)
+ create mode 100644 exercise-2.txt
+ create mode 100644 exercisr-3.txt
+
+ye@Ҷ▒▒▒▒ MINGW64 /d/yetianyu-learning-git (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+ye@Ҷ▒▒▒▒ MINGW64 /d/yetianyu-learning-git (master)
+$ git log
+commit 61251376a4bf409187a8a68b1baca69c604d7bd2 (HEAD -> master)
+Author: bambi233 <13836005934@163.com>
+Date:   Tue Jun 14 16:24:52 2022 +0800
+
+    update2.txt
+
+commit b7fe0082c0ff4bd533cc3d06ddcae0fa605521a4
+Author: bambi233 <13836005934@163.com>
+Date:   Tue Jun 14 16:20:34 2022 +0800
+
+    update1.txt
+
+ye@Ҷ▒▒▒▒ MINGW64 /d/yetianyu-learning-git (master)
+$ git diff
+diff --git a/exercisr-3.txt b/exercisr-3.txt
+index f411a83..29a2d4b 100644
+--- a/exercisr-3.txt
++++ b/exercisr-3.txt
+@@ -1 +1,2 @@
+-exercise3
+\ No newline at end of file
++exercise3
++exercise31
+\ No newline at end of file
+
+ye@Ҷ▒▒▒▒ MINGW64 /d/yetianyu-learning-git (master)
+$ git add exercisr-3.txt
+
+ye@Ҷ▒▒▒▒ MINGW64 /d/yetianyu-learning-git (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   exercisr-3.txt
+
+
+ye@Ҷ▒▒▒▒ MINGW64 /d/yetianyu-learning-git (master)
+$ git commit -m'update3.txt'
+[master 97014b1] update3.txt
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+ye@Ҷ▒▒▒▒ MINGW64 /d/yetianyu-learning-git (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+ye@Ҷ▒▒▒▒ MINGW64 /d/yetianyu-learning-git (master)
+$ git log
+commit 97014b165930df5b08cad266e5e7182435c00d81 (HEAD -> master)
+Author: bambi233 <13836005934@163.com>
+Date:   Tue Jun 14 16:26:26 2022 +0800
+
+    update3.txt
+
+commit 61251376a4bf409187a8a68b1baca69c604d7bd2
+Author: bambi233 <13836005934@163.com>
+Date:   Tue Jun 14 16:24:52 2022 +0800
+
+    update2.txt
+
+commit b7fe0082c0ff4bd533cc3d06ddcae0fa605521a4
+Author: bambi233 <13836005934@163.com>
+Date:   Tue Jun 14 16:20:34 2022 +0800
+
+    update1.txt
+
+ye@Ҷ▒▒▒▒ MINGW64 /d/yetianyu-learning-git (master)
+$ git checkout exercise-2.txt
+Updated 1 path from the index
+
+ye@Ҷ▒▒▒▒ MINGW64 /d/yetianyu-learning-git (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+ye@Ҷ▒▒▒▒ MINGW64 /d/yetianyu-learning-git (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   exercise-2.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+ye@Ҷ▒▒▒▒ MINGW64 /d/yetianyu-learning-git (master)
+$ git add exercise-2.txt
+
+ye@Ҷ▒▒▒▒ MINGW64 /d/yetianyu-learning-git (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   exercise-2.txt
+
+
+ye@Ҷ▒▒▒▒ MINGW64 /d/yetianyu-learning-git (master)
+$ git reset exercise-2.txt
+Unstaged changes after reset:
+M       exercise-2.txt
+
+ye@Ҷ▒▒▒▒ MINGW64 /d/yetianyu-learning-git (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   exercise-2.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+ye@Ҷ▒▒▒▒ MINGW64 /d/yetianyu-learning-git (master)
+$ git add exercise-2.txt
+
+ye@Ҷ▒▒▒▒ MINGW64 /d/yetianyu-learning-git (master)
+$ git commit -m'update22.txt'
+[master b18ee7a] update22.txt
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+ye@Ҷ▒▒▒▒ MINGW64 /d/yetianyu-learning-git (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+ye@Ҷ▒▒▒▒ MINGW64 /d/yetianyu-learning-git (master)
+$ git reset --hard head^
+HEAD is now at 97014b1 update3.txt
+
+ye@Ҷ▒▒▒▒ MINGW64 /d/yetianyu-learning-git (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+ye@Ҷ▒▒▒▒ MINGW64 /d/yetianyu-learning-git (master)
+$ git log
+commit 97014b165930df5b08cad266e5e7182435c00d81 (HEAD -> master)
+Author: bambi233 <13836005934@163.com>
+Date:   Tue Jun 14 16:26:26 2022 +0800
+
+    update3.txt
+
+commit 61251376a4bf409187a8a68b1baca69c604d7bd2
+Author: bambi233 <13836005934@163.com>
+Date:   Tue Jun 14 16:24:52 2022 +0800
+
+    update2.txt
+
+commit b7fe0082c0ff4bd533cc3d06ddcae0fa605521a4
+Author: bambi233 <13836005934@163.com>
+Date:   Tue Jun 14 16:20:34 2022 +0800
+
+    update1.txt
+
+ye@Ҷ▒▒▒▒ MINGW64 ~ (master)
+$ ssh-keygen -t ed25519 -C "13836005934@163.com"
+Generating public/private ed25519 key pair.
+Enter file in which to save the key (/c/Users/ye/.ssh/id_ed25519):
+Created directory '/c/Users/ye/.ssh'.
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Passphrases do not match.  Try again.
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /c/Users/ye/.ssh/id_ed25519
+Your public key has been saved in /c/Users/ye/.ssh/id_ed25519.pub
+The key fingerprint is:
+SHA256:IC6J8ceiNQLJWcOVXHXYNYnpgE6Y4yfp0YwCcBH9LTc 13836005934@163.com
+The key's randomart image is:
++--[ED25519 256]--+
+|o =*o.=.o.o.+o.  |
+|.+o.o* o o.+ ..  |
+|+o. o.X.  o      |
+|.+ = Bo*E  .     |
+|o B * +oS.       |
+| + = .           |
+|.                |
+|                 |
+|                 |
++----[SHA256]-----+
+
+ye@Ҷ▒▒▒▒ MINGW64 ~ (master)
+$ eval "$(ssh-agent -s)"
+Agent pid 2050
+
+ye@Ҷ▒▒▒▒ MINGW64 ~ (master)
+$ clip < ~/.ssh/id_ed25519.pub
+
+ye@Ҷ▒▒▒▒ MINGW64 ~ (master)
+$ ssh -T git@github.com
+The authenticity of host 'github.com (20.205.243.166)' can't be established.
+ED25519 key fingerprint is SHA256:+DiY3wvvV6TuJJhbpZisF/zLDA0zPMSvHdkr4UvCOqU.
+This key is not known by any other names
+Are you sure you want to continue connecting (yes/no/[fingerprint])? y
+Please type 'yes', 'no' or the fingerprint: yes
+Warning: Permanently added 'github.com' (ED25519) to the list of known hosts.
+Enter passphrase for key '/c/Users/ye/.ssh/id_ed25519':
+Enter passphrase for key '/c/Users/ye/.ssh/id_ed25519':
+Hi bambi233! You've successfully authenticated, but GitHub does not provide shell access.
+
+ye@Ҷ▒▒▒▒ MINGW64 /d/yetianyu-learning-git (master)
+$ git remote add origin git@github.com:gtb-2022-ye-tianyu/learngit.git
+
+ye@Ҷ▒▒▒▒ MINGW64 /d/yetianyu-learning-git (master)
+$ git add .
+
+ye@Ҷ▒▒▒▒ MINGW64 /d/yetianyu-learning-git (master)
+$ git commit -m'update4.txt'
+On branch master
+nothing to commit, working tree clean
+
+ye@Ҷ▒▒▒▒ MINGW64 /d/yetianyu-learning-git (master)
+$ git push origin main
+error: src refspec main does not match any
+error: failed to push some refs to 'github.com:gtb-2022-ye-tianyu/learngit.git'
+
+ye@Ҷ▒▒▒▒ MINGW64 /d/yetianyu-learning-git (master)
+$ git branch -m master main
+
+ye@Ҷ▒▒▒▒ MINGW64 /d/yetianyu-learning-git (main)
+$ git push origin main
+Enter passphrase for key '/c/Users/ye/.ssh/id_ed25519':
+To github.com:gtb-2022-ye-tianyu/learngit.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'github.com:gtb-2022-ye-tianyu/learngit.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+ye@Ҷ▒▒▒▒ MINGW64 /d/yetianyu-learning-git (main)
+$ git fetch origin
+Enter passphrase for key '/c/Users/ye/.ssh/id_ed25519':
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 590 bytes | 45.00 KiB/s, done.
+From github.com:gtb-2022-ye-tianyu/learngit
+ * [new branch]      main       -> origin/main
+
+ye@Ҷ▒▒▒▒ MINGW64 /d/yetianyu-learning-git (main)
+$ git merge --allow-unrelated-histories origin/main
+Merge made by the 'ort' strategy.
+ README.md | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.md
+
+ye@Ҷ▒▒▒▒ MINGW64 /d/yetianyu-learning-git (main)
+$ git push origin main
+Enter passphrase for key '/c/Users/ye/.ssh/id_ed25519':
+git@github.com: Permission denied (publickey).
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+ye@Ҷ▒▒▒▒ MINGW64 /d/yetianyu-learning-git (main)
+$ git push origin main
+Enter passphrase for key '/c/Users/ye/.ssh/id_ed25519':
+Enumerating objects: 13, done.
+Counting objects: 100% (13/13), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (7/7), done.
+Writing objects: 100% (12/12), 970 bytes | 323.00 KiB/s, done.
+Total 12 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), done.
+To github.com:gtb-2022-ye-tianyu/learngit.git
+   5724ded..8bffe0b  main -> main
+
+ye@Ҷ▒▒▒▒ MINGW64 /d/yetianyu-learning-git (main)
+$
